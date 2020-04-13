@@ -9,36 +9,30 @@
     <title>Projects_anorak</title>
 </head>
 <body>
-    <main role="main" class="container">
-
-        <div class="starter-template pt-5">
-            <h1>Projects of Anorak!</h1>
-            <p>Here I will have an overview of the different projects I am currently working on.</p>
-        </div>
-
-
-    </main><!-- /.container -->
-    <div class="container">
-      <button class="accordion">Section 1</button>
-      <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus efficitur mauris non tristique.
-            Fusce tempor tortor dolor, a venenatis sem aliquam non. Praesent congue nisi auctor elit fermentum, ut
-            porttitor enim tincidunt. Duis aliquam iaculis enim, ut venenatis tellus blandit in. Aenean sed vulputate mi,
-            ut commodo tellus. Nullam id vehicula erat. Sed commodo, massa sollicitudin interdum cursus,
-            lectus arcu tristique lorem, at luctus urna eros eget lorem.</p>
+    <div class="row">
+      <div class="col-md-2">
       </div>
+      <div class="page col-md-8">
+        <main role="main" class="container">
 
-      <button class="accordion">Section 2</button>
-      <div class="panel">
-          <p>Lorem ipsum2...</p>
+          <div class="container">
+            <h1 class="display-4">Projects of Anorak</h1>
+            <p class="lead">This site host's my little game for the gameJam ludum dare 46</p>
+            <a href="/game.html" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Go to the game</a>
+          </div>
+
+
+        </main><!-- /.container -->
+
+        <footer>
+          <div class="container">
+            <p>This site is from &copy; Anorak6435, I hope you like to play my game! This was an amazing event!</p>
+          </div>
+        </footer>
+      </div> <!--.page-->
+      <div class="col-md-2">
       </div>
-
-      <button class="accordion">Section 3</button>
-      <div class="panel">
-          <p>Lorem ipsum3...</p>
-      </div>
-    </div>
-
+    </div> <!--.row-->
     <script>
       // load a js file.
       function GetJsFile(FileName) {
@@ -46,7 +40,7 @@
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             var bestand = document.getElementById("bestand");
-            bestand.innerHTML = this.responseText;
+            bestand.innerHTML += this.responseText;
           }
         };
         xhttp.open("GET", FileName, true);
@@ -54,6 +48,7 @@
       }
       GetJsFile("/js/main.js");
     </script>
+
     <script id='bestand'></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
